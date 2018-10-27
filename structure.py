@@ -81,3 +81,54 @@ class Graph:
     def adj(self, point):
         # $point should like (point_index, point_info)
         return self.__adj[point[0]]
+
+
+class TreeNode:
+    __left = None
+    __right = None
+    __value = None
+    __father = None
+    __other_info = None
+
+    def __init__(self, value=None, left=None, right=None, father=None, **kwargs):
+        self.__value = value
+        self.__left = left
+        self.__right = right
+        self.__father = father
+        self.__other_info = kwargs
+
+    def set_val(self, value):
+        self.__value = value
+
+    def val(self):
+        return self.__value
+
+    def set_lc(self, node):
+        self.__left = node
+
+    def lc(self):
+        return self.__left
+
+    def set_rc(self, node):
+        self.__right = node
+
+    def rc(self):
+        return self.__right
+
+    def set_fc(self, node):
+        self.__father = node
+
+    def fc(self):
+        return self.__father
+
+    def other_info(self):
+        return self.__other_info
+
+    def copy(self, node):
+        self.__left = node.lc()
+        self.__right = node.rc()
+        self.__value = node.val()
+        self.__other_info = node.other_info()
+
+    def __str__(self):
+        return "{0}, {1}".format(self.val(), self.other_info())

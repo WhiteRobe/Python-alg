@@ -77,3 +77,20 @@ def load_dfs_nocycle_data():
                DirectedEdge(((5, "5"), (6, "6")))]
     V_ = 7
     return start_, g_data_, V_
+
+
+def load_bst_tree_data():
+    data_ = [
+        TreeNode(2, None, None, None, index=0),
+        TreeNode(0, None, None, None, index=1),
+        TreeNode(10, None, None, None, index=2),
+        TreeNode(8, None, None, None, index=3),
+        TreeNode(6, None, None, None, index=4),
+        TreeNode(5, None, None, None, index=5),
+        TreeNode(4, None, None, None, index=6),
+        TreeNode(7, None, None, None, index=7),
+        TreeNode(3, None, None, None, index=8),
+        TreeNode(1, None, None, None, index=9),
+        TreeNode(2, None, None, None, index=10)
+    ]
+    return data_
